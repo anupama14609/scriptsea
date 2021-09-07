@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Blogpost{% endblock title %}
+
+{% block content %}
+{% load humanize %}
+{% load extras %}
+<div class="container my-3">
+    <h2 class="blog-post-title">{{post.title}}</h2>
+    <p class="blog-post-meta">{{post.timeStamp}} by <a href="/about">{{post.author}}</a></p>
+    <p>{{post.content|safe}}</p>
+    <hr>
+</div>
+<div class="container">
+   {% include 'comments.html' %}
+</div>
+{% endblock content %}

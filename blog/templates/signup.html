@@ -1,0 +1,51 @@
+
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Signup Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+      
+          <form action= "/signup" method='post'>         
+            <div class="form-group">
+              <label for="username">User Name</label>
+              <input type="text" class="form-control" name="username" id="username" placeholder="username">
+            </div>         
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-row">             
+              <div class="form-group col-md-6">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="pass" id="password" placeholder="Password">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" class="form-control" name="cpass" id="confirmpassword" placeholder="Confirm Password">
+              </div>
+            </div>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Signup</button>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
